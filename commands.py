@@ -58,12 +58,12 @@ def runcommand1():
                 except IndexError:
                     print('\033[31m')
                     print('\t--> Unexpected user input')
-                    print('\033[0m')
+                    print('\033[32m')
                 
                 except ValueError:
                     print('\033[31m')
                     print('\t--> Unexpected user input')
-                    print('\033[0m')
+                    print('\033[32m')
                 
             elif s in 'nN':
                 break
@@ -71,7 +71,7 @@ def runcommand1():
             else:
                 print('\033[31m')
                 print('\t--> Unexpected user input')
-                print('\033[0m')
+                print('\033[32m')
 
         # Asking user if they want to delete events        
 
@@ -101,12 +101,12 @@ def runcommand1():
                 except IndexError:
                     print('\033[31m')
                     print('\t--> Unexpected user input')
-                    print('\033[0m')
+                    print('\033[32m')
                 
                 except ValueError:
                     print('\033[31m')
                     print('\t--> Unexpected user input')
-                    print('\033[0m')
+                    print('\033[32m')
 
             elif s in 'nN':
                 break
@@ -114,7 +114,7 @@ def runcommand1():
             else:
                 print('\033[31m')
                 print('\t--> Unexpected user input')
-                print('\033[0m')
+                print('\033[32m')
         
         #sorting the event data start time wise
         user_data.sort(key=lambda x: x['start_time'].split(':')[0]*3600 + x['start_time'].split(':')[1]*60 + x['start_time'].split(':')[2])
@@ -134,27 +134,27 @@ def runcommand1():
                 thread.start() #running the tread
                 print(" AUTOMATION STARTED SUCCESSFULLY.")
                 # Loading menu back
-                load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+                load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
                 main.main()
                 break
 
             elif choice in 'Nn':
 
-                load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+                load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
                 main.main()
                 break
 
             else:
                 print('\033[31m')
                 print('\t--> Unexpected user input')
-                print('\033[0m')
+                print('\033[32m')
 
     else: # if there is no internet connection detected
 
         print('\033[31m')
         print("--> Unable to connect. Please check you connection. Redirecting to menu in 5 seconds.")
         time.sleep(5)
-        print('\033[0m')
+        print('\033[32m')
         os.system('cls')
         main.main()
 
@@ -192,12 +192,12 @@ def runcommand2():
         except IndexError:
             print('\033[31m')
             print('\t--> Unexpected user input')
-            print('\033[0m')
+            print('\033[32m')
                 
         except ValueError:
             print('\033[31m')
             print('\t--> Unexpected user input')
-            print('\033[0m')
+            print('\033[32m')
                 
 
     while True:
@@ -226,12 +226,12 @@ def runcommand2():
             except IndexError:
                 print('\033[31m')
                 print('\t--> Unexpected user input')
-                print('\033[0m')
+                print('\033[32m')
                 
             except ValueError:
                 print('\033[31m')
                 print('\t--> Unexpected user input')
-                print('\033[0m')
+                print('\033[32m')
 
         elif s in 'nN':
             break
@@ -239,7 +239,7 @@ def runcommand2():
         else:
             print('\033[31m')
             print('\t--> Unexpected user input')
-            print('\033[0m')    
+            print('\033[32m')    
         
         
     user_data.sort(key=lambda x: x['start_time'].split(':')[0]*3600 + x['start_time'].split(':')[1]*60 + x['start_time'].split(':')[2])
@@ -256,20 +256,20 @@ def runcommand2():
             thread = threading.Thread(target=Automation.events_automation)
             thread.start()
             print(" AUTOMATION STARTED SUCCESSFULLY.")
-            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
             main.main()   
             break
 
         elif choice in 'Nn':
 
-            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
             main.main()
             break
 
         else:
             print('\033[31m')
             print('\t--> Unexpected user input')
-            print('\033[0m')
+            print('\033[32m')
 ##########################################################################################################################
 
 def runcommand3():
@@ -281,7 +281,7 @@ def runcommand3():
         if user_data == None:
             print("\t--> We found nothing from google calender server. You got a free day, I guess ;)")
             time.sleep(2) 
-            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
             main.main()
 
 
@@ -303,7 +303,7 @@ def runcommand3():
             thread.start()
             print(" AUTOMATION STARTED SUCCESSFULLY.")
             time.sleep(2)
-            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+            load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
             main.main()   
 
     else: # if there is no internet connection 
@@ -311,7 +311,7 @@ def runcommand3():
         print('\033[31m')
         print("--> Unable to connect. Please check you connection. Redirecting to menu in 5 seconds.")
         time.sleep(5)
-        print('\033[0m')
+        print('\033[32m')
         os.system('cls')
         main.main()
 
@@ -332,7 +332,7 @@ def runcommand4():
         except ValueError:
             print('\033[31m')
             print('\t--> Unexpected user input')
-            print('\033[0m')
+            print('\033[32m')
 
     while True:
 
@@ -359,7 +359,7 @@ def runcommand4():
                     else:
                         print('\033[31m')
                         print('\t--> Unexpected user input')
-                        print('\033[0m')
+                        print('\033[32m')
                 if choicesBoolean.count(False) == 2:
                     break
             break
@@ -367,12 +367,12 @@ def runcommand4():
         else:
             print('\033[31m')
             print('\t--> Unexpected user input')
-            print('\033[0m')
+            print('\033[32m')
 
     Password = Password_Generator.GeneratePassword(n,*choicesBoolean)
     Automation.show_notification("Passwrd Generated", "Passwrd Generated and copied in your clipboard.")
     time.sleep(2)
-    load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+    load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
     main.main()   
 
 #########################################################################################################################
@@ -382,7 +382,7 @@ def runcommand5():
     print("\n--> This area is still in under development. I recommend you to add/delete events via official google calender website. Opening website...")
     time.sleep(3)
     webbrowser.open("https://calendar.google.com/")
-    load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+    load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
     main.main()
 
 def runcommand6():
@@ -391,7 +391,7 @@ def runcommand6():
     time.sleep(3)
     webbrowser.open('https://forms.gle/mXW7eg1TvjbRVHJp8')
     webbrowser.open('https://github.com/Tsuzat/Online-Classes-Automation-using-Python-and-Google-calender-API/issues')
-    load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+    load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 25)
     main.main()
 
 if __name__ == "__main__":

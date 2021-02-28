@@ -25,7 +25,7 @@ def menu():
     time.sleep(0.075)
     print("\t\t*                                                                 *")
     time.sleep(0.075)
-    print("\t\t*             1. Get today's schedule from google calender.       *")
+    print("\t\t*             1. Get today's schedule from google calendar.       *")
     time.sleep(0.075)
     print("\t\t*             2. Add an event in your schedule locally.           *")
     time.sleep(0.075)

@@ -49,7 +49,11 @@ def events_automation():
                 message = f"You have next meet in {time_left} minutes. Related link will be opened in browser."
                 show_notification(title = title, message = message)
                 sleep(10)
-                webbrowser.open(link)
+                
+                if link:
+                    webbrowser.open(link)
+                else:
+                    show_notification(title = 'Link not found', message = 'No Related link has been found.')
 
             else:
                 continue 

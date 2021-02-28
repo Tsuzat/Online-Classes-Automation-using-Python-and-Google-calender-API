@@ -9,8 +9,6 @@ import displayUI
 # System call
 os.system("")
 
-Command_dir = {'help': None}
-
 # for clearing the screen
 def clrscr():
     
@@ -53,7 +51,7 @@ def UsersCommand():
         clrscr()
         print('\033[31m')
         print("--> ALERT! EXITING WILL SHUT DOWN BACKGROUND AUTOMATION PROCESSES (if any process is running). YOU CAN MINIMISE THE WINDOW INSTEAD.")
-        print('\033[0m')
+        print('\033[32m')
         
         while True:
             
@@ -64,27 +62,37 @@ def UsersCommand():
                 break
             
             elif inp in 'Nn': # Reload the menu
-                load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[37m',load_time = 50)
+                load_animation.load_animation(load_this_str = " Loading Menu...",color = '\033[32m',load_time = 50)
                 main()
             
             else:  # Unexpected command
                 print('\033[31m')
                 print('\t--> Unexpected user input')
-                print('\033[0m')
+                print('\033[32m')
 
     else: # adding some additional features 
-        split_command = command.split("--")
+        print('\033[31m')
+        print('\t--> Unexpected user input')
+        print('\033[32m')
+        time.sleep(1)
+        clrscr()
+        main()
 
 
 def WelcomeMessage(): # Will run just once.
+    clrscr()
+    print('\033[32m')
 
-    print(displayUI.style.MAGENTA)
-
-    print("--> WELCOME TO YOUR ONLINE CLASSES MANAGER.")
-    print("--> This app is still in beta version. Please report bugs and feedbacks to help us to improve this application.")
-    print("--> Press ENTER continue" ,end = " " )
+    print('''
+        .----------------------. 
+        |        WELCOME       |
+        '----------------------'
+                ^      (\_/)
+                '----- (O.o)
+                       (> <)
+             
+            Press ENTER to continue ''',end = ' ')
     input()
-    
     load_animation.load_animation(load_this_str = "please wait, loading application.....",color = displayUI.style.CYAN, load_time= 25)
     os.system('cls')
 

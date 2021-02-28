@@ -70,7 +70,7 @@ def CheckUser():
             
             d1['start_time'] = re.search(r'\d{2}:\d{2}:\d{2}',start).group()
             d1['end_time'] = re.search(r'\d{2}:\d{2}:\d{2}',end).group()
-            d1['summary'] = event['summary']
+            d1['summary'] = event['summary'] if 'summary' in event else 'No Title'
 
             #Getting meet/hangoutLink
             if 'hangoutLink' in event: #if link is in hangoutLink
